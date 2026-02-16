@@ -26,7 +26,10 @@ function ProtectedRoute({ children }) {
         <div className="spinner"></div>
       </div>
     );
-  if (!user) return null;
+  if (!user) {
+    location.href="/login";
+    return;
+  };
   return children;
 }
 
