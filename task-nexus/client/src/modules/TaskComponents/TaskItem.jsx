@@ -4,6 +4,19 @@ import { Trash2, Check, Clock } from 'lucide-react';
 import Button from '../UI/Button';
 
 const TaskItem = ({ task, onDelete, onToggle }) => {
+
+    TaskItem.propTypes = {
+        task: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            completed: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]).isRequired,
+            created_at: PropTypes.string
+        }).isRequired,
+        onDelete: PropTypes.func.isRequired,
+        onToggle: PropTypes.func.isRequired
+    };
+
+
     return (
         <div className="task-item fade-in">
             <div className="task-content">
@@ -20,7 +33,7 @@ const TaskItem = ({ task, onDelete, onToggle }) => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.2rem' }}>
                         <Clock size={12} color="#666" />
                         <span style={{ fontSize: '0.75rem', color: '#666' }}>
-                            {new Date(task.created_at).toLocaleDateString()
+                            {new Date(task.created_at).toLocaleDateString()}
             </span>
                     </div>
                 </div>
@@ -35,14 +48,6 @@ const TaskItem = ({ task, onDelete, onToggle }) => {
             </Button>
         </div>
     );
+}
 
-    TaskItem.propTypes = {
-        task: PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            completed: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]).isRequired,
-            created_at: PropTypes.string
-        }).isRequired,
-        onDelete: PropTypes.func.isRequired,
-        onToggle: PropTypes.func.isRequired
-    };
+export default TaskItem
