@@ -1,4 +1,3 @@
-
 const Card = ({ children, className = "" }) => {
   return <div className={`card glass fade-in ${className}`}>{children}</div>;
 };
