@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
     }, [token]);
 
     const login = async (email, password) => {
-        const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+        const response = await axios.post(`${API_BASE}/auth/login`, { email, password });
         localStorage.setItem('nexus_token', response.data.token);
         setToken(response.data.token);
         setUser(response.data.user);
