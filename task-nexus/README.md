@@ -64,6 +64,7 @@ DB_USER=root
 DB_PASSWORD=
 DB_NAME=task_nexus
 PORT=5000
+JWT_SECRET=your_super_secret_jwt_key_change_this
 ```
 
 Adjust credentials to match your local MySQL setup.
