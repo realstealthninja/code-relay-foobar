@@ -1134,3 +1134,20 @@ select {
         flex-direction: column;
     }
 }
+
+/**
+    LANDING
+*/
+
+.hero-nav {
+    display: flex;
+    align-items: end;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}

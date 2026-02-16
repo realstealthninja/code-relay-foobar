@@ -23,7 +23,7 @@ export default function Layout() {
 
         <nav className="sidebar-nav">
           <NavLink
-            to="/"
+            to="/dashboard"
             end
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
           >
