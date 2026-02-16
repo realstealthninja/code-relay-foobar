@@ -12,7 +12,7 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         if (token) {
-            axios.get('http://localhost:5000/api/auth/me', {
+            axios.get(`${API_BASE}/auth/me`, {
                 headers: { Authorization: `Bearer ${token}` }
             })
                 .then(response => {
