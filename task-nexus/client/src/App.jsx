@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { Plus, Layout as LayoutIcon } from 'lucide-react';
-import TaskList from './modules/TaskComponents/TaskLits';
+import TaskList from './modules/TaskComponents/TaskList';
 import Card from './modules/UI/Card';
 import Input from './modules/UI/Input';
 import Button from './modules/UI/Button';
@@ -114,12 +114,12 @@ function App() {
         <AuthProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login/>} />
                     <Route path="/register" element={<Register />} />
 
-                    <Route path="/" element={<ProtectedRoute><LayoutComponent /></ProtectedRoute>}>
+                    <Route path="/" element={<ProtectedRoute><LayoutComponent/></ProtectedRoute>}>
                         <Route index element={<Dashboard />} />
-                        <Route path="workspaces" element={<Workspaces />} />
+                 1       <Route path="workspaces" element={<Workspaces />} />
                         <Route path="workspaces/:workspaceId" element={<Projects />} />
                         <Route path="projects/:projectId" element={<Tasks />} />
                     </Route>
