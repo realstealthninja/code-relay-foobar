@@ -29,7 +29,7 @@ function ProtectedRoute({ children }) {
   if (!user) {
     location.href="/login";
     return;
-  };
+  }
   return children;
 }
 
