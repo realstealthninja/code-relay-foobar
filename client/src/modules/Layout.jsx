@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import { useAuth } from "../modules/context/AuthContext";
+import { useAuth } from "./context/AuthContext";
 import { LayoutDashboard, Building2, LogOut, User } from "lucide-react";
 
 export default function Layout() {

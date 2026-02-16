@@ -215,6 +215,18 @@ app.get('/api/projects/workspace/:workspaceId', (req, res) => {
         }
     );
 });
+app.post("/api/projects/workspace/:id/invite ", (req, res) => {
+
+    const { user } = req.body;
+
+    let userId = 1;
+    try {
+        const token = req.headers.authorization?.split(' ')[1];
+        if (token) {
+            userId = jwt.verify(token, JWT_SECRET).id;
+        }
+    } catch (e) { }
+})
 
 app.get('/api/projects/:id', (req, res) => {
     fluxNexusHandler.query('SELECT * FROM projects WHERE id = ?', [req.params.id], (err, results) => {

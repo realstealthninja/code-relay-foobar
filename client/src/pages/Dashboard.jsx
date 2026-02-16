@@ -96,7 +96,7 @@ export default function Dashboard() {
             </div>
           </div>
         ))}
-      </div>
+      </div>Dashboard
 
       <div className="dashboard-charts">
         <div className="chart-card glass">
