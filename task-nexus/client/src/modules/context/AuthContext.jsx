@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
   };
 
   const logout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("nexus_token");
     setToken(null);
     setUser(null);
   };
