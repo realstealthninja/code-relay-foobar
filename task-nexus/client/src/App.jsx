@@ -46,7 +46,7 @@ function LegacyTaskApp() {
         e.preventDefault();
         if (!newTitle) return;
         try {
-            const response = await axios.post('http://localhost:5000/api/tasks', { title: newTitle });
+            const response = await axios.post(`${API_BASE}/api/tasks`, { title: newTitle });
             setQuantumTasks([...quantumTasks, response.data]);
             setNewTitle('');
         } catch (error) {
