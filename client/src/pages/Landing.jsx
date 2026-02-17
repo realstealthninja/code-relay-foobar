@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useAuth } from "../modules/context/AuthContext"
 
 function Landing() {
-  const { user, loading } = useAuth();
+  const { user, _ } = useAuth();
 
   if (user) {
     location.href = "/dashboard";
