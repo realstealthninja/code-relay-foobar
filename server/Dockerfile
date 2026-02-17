@@ -1,6 +1,6 @@
 FROM node:lts
 
-WORKDIR server
+WORKDIR /server
 
 COPY . .
 
