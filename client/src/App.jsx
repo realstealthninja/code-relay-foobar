@@ -1,11 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import axios from "axios";
-import { Plus, Layout as LayoutIcon } from "lucide-react";
-import TaskList from "./modules/TaskComponents/TaskList";
-import Card from "./modules/UI/Card";
-import Input from "./modules/UI/Input";
-import Button from "./modules/UI/Button";
 import { AuthProvider, useAuth } from "./modules/context/AuthContext";
 import LayoutComponent from "./modules/Layout";
 import Login from "./pages/Login";
@@ -16,8 +9,6 @@ import Projects from "./pages/Projects";
 import Tasks from "./pages/Tasks";
 import Landing from "./pages/Landing";
 import "./App.css";
-
-const API_BASE = import.meta.env.API_URL || "http://localhost:5000";
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
